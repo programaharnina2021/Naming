@@ -1,6 +1,7 @@
 package ligav1;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Equipo {
 	private int id;
@@ -43,6 +44,10 @@ public class Equipo {
 			return false;
 		Equipo other = (Equipo) obj;
 		return id == other.id && Objects.equals(nombre, other.nombre);
+	}
+
+	public Integer pedirGoles() {
+		return new Random().nextInt(10);
 	}
 
 }

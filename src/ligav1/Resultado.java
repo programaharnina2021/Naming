@@ -12,7 +12,7 @@ public enum Resultado {
 		return puntos;
 	}
 
-	public static Resultado getPuntos(int goles, int goles2) {
+	public static Resultado getResultado(int goles, int goles2) {
 		if(goles==goles2)
 			return empate;
 		if(goles>goles2)

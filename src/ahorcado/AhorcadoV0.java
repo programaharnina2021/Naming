@@ -1,10 +1,12 @@
 package ahorcado;
 
+import java.util.Observable;
 import java.util.Scanner;
 
 public class AhorcadoV0
 {
 	public static void main(String[] args) {
+		Observable vdd;
 		//Leer la palabra secreta
 		Scanner lector = new Scanner(System.in);
 		System.out.println("Introduce la palabra secreta");

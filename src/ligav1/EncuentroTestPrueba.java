@@ -8,7 +8,11 @@ class EncuentroTestPrueba {
 
 	@Test
 	void testCalculaPuntos() {
-		Encuentro encuentro=new Encuentro(new Participacion(new Equipo(1,"uno"), null)
+		Participacion participacion = new Participacion(new Equipo(1,"uno"),2);
+		Equipo equipo = new Equipo(2,"dos");
+		Participacion participacion2 = new Participacion(equipo,3);
+		Encuentro encuentro=new Encuentro(participacion, participacion2);
+		assertEquals(Resultado.victoria.getPuntos(), encuentro.getPuntos(equipo));
 	}
 
 }
