@@ -24,6 +24,20 @@ public static void main(String[] args) {
 			refiltro.add(movil);
 		}
 	}
-	System.out.println(refiltro.size());
+	boolean nfc=true;
+	List<Movil> rerefiltro = new ArrayList<>();
+	for (Movil movil : refiltro) {
+		if(movil.isNfc()==nfc) {
+			rerefiltro.add(movil);
+		}
+	}
+	float otroMinimo=1;
+	int otroMaximo=6;
+	List<Movil> rererefiltro = new ArrayList<>();
+	for (Movil movil : rerefiltro) {
+		if(movil.getOtro()>=otroMinimo&&movil.getOtro()<=otroMaximo) {
+			rererefiltro.add(movil);
+		}
+	}
 }
 }
